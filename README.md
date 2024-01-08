@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [x] added `toLocaleString()`to places where numbers where rendered (specifically Backers)
+* [x] added `toLocaleString()`to places where numbers were rendered (specifically Backers)
 * [x] added alt text to the image to provide accessibility
 * [x] added `cursor: pointer;` to the buttons selector in the stylesheet to help with the User Experience when hovering over a button
 
