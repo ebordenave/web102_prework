@@ -29,26 +29,24 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
-
-
-        // create a new div element, which will become the game card
-
-
+    for(const game of games){
+        const newDiv = document.createElement("div")
         // add the class game-card to the list
-
-
-        // set the inner HTML using a template literal to display some info 
+        newDiv.classList.add("game-card")
+        // create a new div element, which will become the game card
+        // set the inner HTML using a template literal to display some info
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-
-
+        newDiv.innerHTML = `<p>${game.name}</p> <p>${game.description}</p> <img src="${game.img}" alt="${game.name} image" class="game-img">`
         // append the game to the games-container
-
+        document.getElementById("games-container").appendChild(newDiv)
+    }
 }
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
+addGamesToPage(GAMES_JSON)
 
 
 /*************************************************************************************
@@ -138,7 +136,7 @@ const descriptionContainer = document.getElementById("description-container");
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
- * Skills used: spread operator, destructuring, template literals, sort 
+ * Skills used: spread operator, destructuring, template literals, sort
  */
 
 const firstGameContainer = document.getElementById("first-game");
