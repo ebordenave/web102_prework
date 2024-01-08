@@ -24,7 +24,9 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/qrf6QCQ"  ><a href="//imgur.com/a/qrf6QCQ">CodePath Prework Demo</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/qrf6QCQ"  ><a href="//imgur.com/a/qrf6QCQ">CodePath Prework Demo</a></blockquote>
+
+[//]: # (<script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
 <a>https://imgur.com/a/qrf6QCQ</a>
 
 <!-- Replace this with whatever GIF tool you used! -->
@@ -38,7 +40,7 @@ GIF created with LiceCAP
 
 Describe any challenges encountered while building the app.
 <ul>
-    <li>A Challenge I faced while creating this app was regarding the password keys. The instructions would say "n" number of characters, where as my passwords didn't always meet that count which made me unsure if I had the correct answer.
+    <li>A Challenge I faced while creating this app was regarding the password keys. The instructions would say "n" number of characters, whereas my passwords didn't always meet that count which made me unsure if I had the correct answer.
     </li>
 </ul>
 
