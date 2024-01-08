@@ -67,10 +67,10 @@ contributionsCard.innerHTML = `${totalBackers.toLocaleString()}`
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised")
 
-const totalPledged = GAMES_JSON.reduce((acc,game)=> acc + game.pledged, 0);
+const totalPledged = `${"$" + GAMES_JSON.reduce((acc,game)=> acc + game.pledged, 0).toLocaleString()}`;
 
 // set inner HTML using template literal
-raisedCard.innerHTML = `${"$" + totalPledged}`
+raisedCard.innerHTML = `${totalPledged}`
 
 
 // grab number of games card and set its inner HTML
@@ -146,12 +146,29 @@ allBtn.addEventListener('click', showAllGames)
 const descriptionContainer = document.getElementById("description-container");
 
 // use filter or reduce to count the number of unfunded games
+const unFundedGames = GAMES_JSON.filter((games)=> {
+  return games.pledged < games.goal
+})
+
+const FundedGames = GAMES_JSON.filter((games)=> {
+  return games.pledged >= games.goal
+})
+
+const numberOfUnfundedGames = unFundedGames.reduce(acc => acc + 1, 0)
+const numberOfFundedGames = FundedGames.reduce(acc => acc + 1, 0)
+
 
 
 // create a string that explains the number of unfunded games using the ternary operator
+const displayStr = numberOfUnfundedGames > 1 ? `A total of ${totalPledged} has been raised for ${GAMES_JSON.length} games. Currently, ${numberOfUnfundedGames} games remain unfunded. We need your help to fund these amazing games!` : `A total of ${totalPledged} has been raised for ${GAMES_JSON.length} games. Currently, ${numberOfUnfundedGames} game remains unfunded. We need your help to fund these amazing games!`
 
 
 // create a new DOM element containing the template string and append it to the description container
+const newDOMElement = document.createElement("p")
+
+newDOMElement.innerHTML = displayStr
+document.getElementById("description-container").appendChild(newDOMElement)
+
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
